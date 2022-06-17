@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(qt-chat-server LANGUAGES CXX)
+set (CMAKE_PREFIX_PATH "C:\\Qt\\5.15.10\\msvc2019_64\\")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
