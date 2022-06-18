@@ -5,6 +5,7 @@
 #include <QTcpServer>
 #include <QHash>
 #include <QTcpSocket>
+#include "AeroScope.h"
 
 class TcpServer : public QObject
 {
@@ -29,7 +30,7 @@ private:
 private:
     QTcpServer _server;
     QHash<QString, QTcpSocket*> _clients;
-    AeroScope * _aeroscope;
+    AeroScope*  _aeroscope;
 };
 
 #endif // TCPSERVER_HPP

@@ -39,6 +39,8 @@ else()
     add_executable(qt-chat-server
         TcpServer.hpp
         TcpServer.cpp
+        AeroScope.h
+        AeroScope.cpp
       main.cpp
       qml.qrc
     )

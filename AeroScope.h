@@ -55,18 +55,18 @@ typedef struct P_DRONE_INFOS
 #pragma pack()
 
 
-class AeroScope: public QObject
+class AeroScope : public QObject
 {
 	Q_OBJECT
 public:
 	explicit AeroScope(QObject* parent = nullptr);
+	int get_drone_info_packet(char* packet);
 
 signals:
- 
+
 public slots:
 
 private:
-   int get_drone_info_packet(unsigned char* packet);
 
 private slots:
 

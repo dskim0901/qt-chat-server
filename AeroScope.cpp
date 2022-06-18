@@ -6,7 +6,7 @@ AeroScope::AeroScope(QObject* parent) : QObject(parent)
 {
 }
 
-int AeroScope::get_drone_info_packet(unsigned char *packet)
+int AeroScope::get_drone_info_packet(char *packet)
 {
 	P_DRONE_INFOS p_drone_infos;
 	p_drone_infos.p_header.command_code = 0x2;

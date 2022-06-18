@@ -57,8 +57,17 @@ void TcpServer::onClientDisconnected()
 
 void TcpServer::onNewMessage(const QByteArray &ba)
 {
+    //for(const auto &client : qAsConst(_clients)) {
+    //    client->write(ba);
+    //    client->flush();
+    //}
+
+    char packet[1024];
+    auto packet_size = _aeroscope->get_drone_info_packet(packet);
+    auto qPacket = QByteArray(packet,packet_size);
+
     for(const auto &client : qAsConst(_clients)) {
-        client->write(ba);
+        client->write(qPacket);
         client->flush();
     }
 }
