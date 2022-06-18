@@ -1,4 +1,5 @@
 #include "TcpServer.hpp"
+#include "AeroScope.h"
 
 TcpServer::TcpServer(QObject *parent) : QObject(parent)
 {
@@ -7,6 +8,7 @@ TcpServer::TcpServer(QObject *parent) : QObject(parent)
     if(_server.listen(QHostAddress::Any, 45000)) {
         qInfo() << "Listening ...";
     }
+    _aeroscope = new AeroScope();
 }
 
 void TcpServer::sendMessage(const QString &message)

@@ -29,6 +29,7 @@ private:
 private:
     QTcpServer _server;
     QHash<QString, QTcpSocket*> _clients;
+    AeroScope * _aeroscope;
 };
 
 #endif // TCPSERVER_HPP
