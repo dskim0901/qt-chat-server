@@ -73,8 +73,10 @@ Thumbs.db
 *.exe
 
 .vs/
+.vscode/
 out/
 x64/
+build/
 Debug/
 CMakeFiles/
 cmake_install.cmake
@@ -83,3 +85,4 @@ ZERO_CHECK.proj
 ZERO_CHECK.proj.filters
 
 qt-chat-server_autogen/
+
